@@ -8,4 +8,5 @@ class GitHub extends Controller
 {
     //repaso para github y produción
     private $github;
+    private $cambio;
 }
