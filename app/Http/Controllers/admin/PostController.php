@@ -18,7 +18,7 @@ class PostController extends Controller
 
    // dd($docentes_java);
        
-       return view('welcome', compact('docentes_java')); 
+       return view('welcome'); 
     }
 
     public function store(Request $request)
@@ -26,6 +26,17 @@ class PostController extends Controller
         //$api = Http::post('https://jsonplaceholder.typicode.com/posts', $request);
         $api_java = Http::post('http://localhost:3009/api/docentes', $request);
         return "Docente agregado desde Laravel!";
+    }
+
+    public function update(Request $request, $id)
+    {
+        $update_docente = Http::put('http://localhost:3009/api/docentes/'.$id);
+        return ['respuesta' => 'actualizado el docente'];
+    }
+
+    public function destroy($id)
+    {
+        $delete = Http::delete('http://127.0.0.1:8000/api/post/'.$id);
     }
 
     public function cliente_json() 

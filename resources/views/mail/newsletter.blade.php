@@ -23,32 +23,8 @@
             <!-- place navbar here -->
         </header>
         <main>
-            <h1>Consumiendo API externa desde Laravel</h1>
-
-
-            <div class="container">
-                {{-- <h2>Listado de docentes</h2>
-                <ul>
-                    @foreach ($docentes_java as $docente)
-                        <li>{{$docente['nombre']}} - Edad {{$docente['edad']}} - email: {{$docente['email']}}</li>
-                    @endforeach
-                </ul> --}}
-
-                <div class="container mt-4">
-                    <h2>Suscribete al newsletter</h2>
-
-                    <div class="container mt-3">
-                        <form action="{{route('contacto')}}" method="post">
-                            @csrf
-                            <input type="text" name="name" placeholder="Nombre">
-                            <input type="email" name="email" placeholder="Correo">
-                            <textarea name="nota" id="" cols="30" rows="10" placeholder="Agregar nota"></textarea>
-                            <input type="submit" class="btn btn-primary" value="Suscribirme!">
-                        </form>
-                    </div>
-                </div>
-
-            </div>
+            <h1>Gracias por unirte {{$usuario['name']}}!</h1>
+            <p>Tu correo es: {{$usuario['email']}}</p>
         </main>
         <footer>
             <!-- place footer here -->
